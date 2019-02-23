@@ -26,7 +26,7 @@ class BluetoothManager:
         return str(self._execute(["hciconfig", self.adapter, "name"])).split("Name: '")[1].rsplit("'")[0]
 
     def show(self):
-        pass
+        self._execute(["hciconfig", self.adapter, "piscan"])
 
     def hide(self):
-        pass
+        self._execute(["hciconfig", self.adapter, "noscan"])

@@ -9,3 +9,9 @@ bt.setName("BlumeDevice")
 print(bt.getName())
 
 input("")
+
+bt.show()
+
+input()
+
+bt.hide()
