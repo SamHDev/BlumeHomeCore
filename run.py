@@ -6,4 +6,6 @@ bt = blume.BluetoothManager()
 
 bt.setName("BlumeDevice")
 
+print(bt.getName())
+
 input("")
