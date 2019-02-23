@@ -17,11 +17,14 @@ sudo python3 -m pip install pybluez
 
 echo "Editing Hostname"
 sudo cp /etc/hostname /etc/hostname_backup
-echo "echo BlumeDevice >> /etc/hostname " | sudo bash
+echo "echo BlumeDevice > /etc/hostname " | sudo bash
 sudo hciconfig hci0 name 'BlumeDevice'
 
 echo "Creating User"
-adduser --disabled-password --gecos "" blume
-passwd blume BlumeHome123!
+sudo adduser --disabled-password --gecos "" blume
+sudo echo "blumeIOTRulez" | sudo passwd --stdin linuxuser
 
 echo "Downloading Code"
+sudo git clone https://github.com/SamHDev/BlumeHomeCore.git /home/blume/code/
+
+echo "Creating Service"

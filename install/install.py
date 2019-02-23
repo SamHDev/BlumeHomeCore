@@ -2,7 +2,7 @@ import subprocess
 
 text = """
 [Unit]
-Description=BlumeHome Daemon
+Description=BlumeIOT Device Daemon
 Wants=network-online.target
 After=network.target
 
@@ -15,3 +15,7 @@ StandardOutput=console
 [Install]
 WantedBy=multi-user.target
 """
+
+f = open("/etc/systemd/system/blume.service","w")
+f.write(text)
+f.close()

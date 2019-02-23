@@ -1,3 +1,9 @@
-from BlumeHomeCore import blumeIOT as blume
+import blumeIOT as blume
 
 blume.BlumeManager(config="config.json")
+
+bt = blume.BluetoothManager()
+
+bt.setName("BlumeDevice")
+
+input("")
