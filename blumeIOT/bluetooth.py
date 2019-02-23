@@ -23,7 +23,7 @@ class BluetoothManager:
         self._execute(["hciconfig",self.adapter,"name",name])
 
     def getName(self):
-        pass
+        return self._execute(["hciconfig", self.adapter, "name"])
 
     def show(self):
         pass
